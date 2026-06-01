@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">Nova Store</div>
+  <nav>
+    <a href="#">Store</a>
+  </nav>
+  <a class="cart" href="#cart" aria-label="Jump to cart">🛒 <span id="cartCount">0</span></a>
+  
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="image/Cover.png">
+  <div class="overlay"></div>
+
+  <div class="hero-text reveal">
+    <p class="tag">New</p>
+    <h1>Iphone 17 Pro Max</h1>
+    <h2>$2500</h2>
+    <button onclick="addToCart(6)">Buy Now</button>
+  </div>
+</section>
+
+<section class="search-section">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products by name" autocomplete="off">
+
+    <select id="categoryFilter" aria-label="Filter by category">
+      <option value="all">All Categories</option>
+      <option value="phones">Phones</option>
+      <option value="Mac Book">Mac Book</option>
+      <option value="audio">Audio</option>
+      <option value="wearables">Wearables</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="low">Under $800</option>
+      <option value="mid">$800 - $1000</option>
+      <option value="high">Above $1000</option>
+    </select>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h2 class="reveal">Featured products</h2>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="cart-section" id="cart">
+  <h2>Your Cart</h2>
+
+  <div class="cart-box" id="cartItems"></div>
+
+  <div class="cart-total">
+    <h3>Total: $<span id="totalPrice">0</span></h3>
+  </div>
+</section>
+
+<script src="myscript.js"></script>
+</body>
+</html>
